@@ -42,7 +42,7 @@ function App() {
 
   const handleSearch = () => {
     if (searchQuery.trim() === "") {
-      setError("Search query is required.");
+      setError("Qidiruv so'rovi talab qilinadi.");
       setSearchResults([]);
     } else {
       setError("");
