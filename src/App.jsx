@@ -58,7 +58,7 @@ function App() {
   const renderTable = (data) => (
     <Table striped bordered hover size="sm">
       <thead>
-        <tr>
+        <tr className='inter'>
           <th>#</th>
           <th>First Name</th>
           <th>Last Name</th>
@@ -95,7 +95,7 @@ function App() {
         <div className="logo">
           <div className="input " >
             <input
-              type="text"
+              type="search"
               placeholder="User name"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -114,7 +114,7 @@ function App() {
               <div className="card-body">
                 <form onSubmit={(e) => e.preventDefault()}>
                   <input
-                    type="text"
+                    type="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="FirstName"
