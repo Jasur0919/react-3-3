@@ -35,6 +35,11 @@ button {
   justify-content: space-between;
   margin-top: 30px;
   width: 100%;
+  background-image: url(./assets/bg-1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 20px;
+  border-radius: 10px;
 
 }
 

@@ -9,8 +9,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
 import AnimatedCursor from "react-animated-cursor"
+import Aos from 'aos';
 
 function App() {
+
+  // useEffect(() => {
+  //   Aos.init({duration: 1000})
+  // },[])
+
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState("");
@@ -87,7 +93,10 @@ function App() {
       </div>
       <div className="container">
         <div className="logo">
-          <div className="input">
+          <div className="input " 
+          // data-aos="fade-up"
+          //    data-aos-duration="3000"
+             >
             <input
               type="text"
               placeholder="User name"
