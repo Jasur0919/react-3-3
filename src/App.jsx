@@ -1,123 +1,3 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import './App.css'
-// import Table from 'react-bootstrap/Table';
-
-
-// function App() {
-//   const [name, setName] = useState("")
-//   const [lastName, setLastName] = useState("")
-//   const [age, setAge] = useState("")
-//   const [gender, setGender] = useState("")
-//   const [users, setUsers] = useState("")
-//   const addUser = () => {
-//     console.log(name);
-//     console.log(lastName);
-//     console.log(age);
-//     console.log(gender);
-//     users.push({name, lastName, age, gender})
-//     setUsers([...users])
-//   }
-  
-
-//   return (
-//     <>
- 
-//       <div className="container">
-//       <div className="col-md-4">
-//       <div className="card">
-//         <div className="card-header">
-//           <h1>Add User</h1>
-//         </div>
-//         <div className="card-body">
-//           <form>
-//             <input type="text" onChange={(e) => setName(e.target.value)}  placeholder='FirstName' className='form-control  my-2' />
-//             <input type="text" onChange={(e) => setLastName(e.target.value)}  placeholder='LastName' className='form-control  my-2' />
-//             <input type="number" onChange={(e) => setAge(e.target.value)}  placeholder='Age' className='form-control  my-2' />
-//             <input type="text" onChange={(e) => setGender(e.target.value)}  placeholder='Gender' className='form-control  my-2' />
-//           </form>
-//         </div>
-//         <div className="card-footer">
-//           <button className='btn btn-primary' onClick={addUser}>add user</button>
-//         </div>
-//       </div>
-//     </div>
-//          <div className="logo_section">
-//             {/* <table>
-//               <thead>
-//                 <tr className='table_tr'>
-//                   <td>T/R</td>
-//                   <td>FirstName</td>
-//                   <td>LastName</td>
-//                   <td>Age</td>
-//                   <td>Mail</td>
-//                 </tr>
-//               </thead>
-//               <tbody>
-//                 <tr>
-//                   <td>1</td>
-//                   <td>Olim</td>
-//                   <td>Umar</td>
-//                   <td>17</td>
-//                   <td>Mail</td>
-//                 </tr>
-//               </tbody>
-//             </table> */}
-
-// <Table striped bordered hover size="sm">
-//       <thead>
-//         <tr>
-//           <th>#</th>
-//           <th>First Name</th>
-//           <th>Last Name</th>
-//           <th>Age</th>
-//           <th>Genner</th>
-//         </tr>
-//       </thead>
-//       <tbody>
-
-//             {
-//               console.log(users, "users")
-//             }
-         
-//         {/* {
-//           users.map((item, index) => (
-//             <tr key={index}>
-//               <td>{item}</td>
-
-//             </tr>
-            
-//           ))
-//         } */}
-
-
-//         {/* <tr>
-//           <td>1</td>
-//           <td>Mark</td>
-//           <td>Otto</td>
-//           <td>16</td>
-//           <td></td>
-//         </tr>
-//         <tr>
-//           <td>3</td>
-//           <td colSpan={2}>Larry the Bird</td>
-//           <td>@twitter</td>
-//         </tr> */}
-//       </tbody>
-//     </Table>
-
-    
-//           </div> 
-//         </div>
-  
-
-//     </>
-//   )
-// }
-
-// export default App
 
 
 
@@ -126,6 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Table from 'react-bootstrap/Table'
 import Aos from 'aos';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation, Autoplay } from 'swiper/modules';
+
+
+
 
 
 
@@ -152,8 +39,16 @@ function App() {
 
   return (
     <>
+
+    {/* <div className="swiper">
       <div className="container">
-        <div className="col-md-4">
+        <div className="swiper_box">
+          <img src={Img} alt="" />
+        </div>
+      </div>
+    </div> */}
+      <div className="container">
+        <div className="col-md-4 table-1">
           <div className="card">
             <div className="card-header">
               <h1>Add User</h1>
@@ -197,6 +92,17 @@ function App() {
         </div>
 
         <div className="logo_section" >
+        <Swiper navigation={true} 
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+         loop={true} modules={[Navigation, Autoplay]} className="mySwiper">
+          <SwiperSlide>
           <Table striped bordered hover size="sm">
             <thead>
               <tr >
@@ -219,6 +125,54 @@ function App() {
               ))}
             </tbody>
           </Table>
+          </SwiperSlide>
+          <SwiperSlide>
+          <Table striped bordered hover size="sm">
+            <thead>
+              <tr >
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+              </tr>
+            </thead>
+            <tbody >
+              {users.map((user, index) => (
+                <tr key={index}   >
+                  <td >{index + 1}</td>
+                  <td>{user.name}</td>
+                  <td>{user.lastName}</td>
+                  <td>{user.age}</td>
+                  <td>{user.gender}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+          </SwiperSlide>
+        </Swiper>
+          {/* <Table striped bordered hover size="sm">
+            <thead>
+              <tr >
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+              </tr>
+            </thead>
+            <tbody >
+              {users.map((user, index) => (
+                <tr key={index}   >
+                  <td >{index + 1}</td>
+                  <td>{user.name}</td>
+                  <td>{user.lastName}</td>
+                  <td>{user.age}</td>
+                  <td>{user.gender}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table> */}
         </div>
       </div>
     </>
