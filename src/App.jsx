@@ -64,7 +64,7 @@ function App() {
           <th>Last Name</th>
           <th>Age</th>
           <th>Gender</th>
-          <th>Actions</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -93,10 +93,7 @@ function App() {
       </div>
       <div className="container">
         <div className="logo">
-          <div className="input " 
-          // data-aos="fade-up"
-          //    data-aos-duration="3000"
-             >
+          <div className="input " >
             <input
               type="text"
               placeholder="User name"
