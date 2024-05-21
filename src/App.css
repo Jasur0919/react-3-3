@@ -49,13 +49,13 @@ button {
   
 }
 
-.input:hover {
+/* .input:hover {
   transform: rotate(15deg)
     rotateY(17deg)
     perspective(600px)
     scale(0.9);
   transform-origin: center center;
-}
+} */
 
 .logo_section {
   margin-top: 100px;
