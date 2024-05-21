@@ -23,7 +23,38 @@ button {
   cursor: pointer;
 } 
 
-.table-1 {
-  margin: 50px 0;
+
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 100%;
+
 }
+
+.input input {
+  width: 100%;
+  width: 500px;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  border: 1px solid blue;
+  
+}
+
+.input input:hover {
+  transform: rotate(15deg)
+    rotateY(17deg)
+    perspective(600px)
+    scale(0.9);
+  transform-origin: center center;
+}
+
+.logo_section {
+  margin-top: 100px;
+}
+
+
  

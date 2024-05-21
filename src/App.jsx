@@ -40,14 +40,14 @@ function App() {
   return (
     <>
 
-    {/* <div className="swiper">
       <div className="container">
-        <div className="swiper_box">
-          <img src={Img} alt="" />
+      
+      <div className="logo  ">
+      <div className="input">
+          <input type="text" placeholder='User name' />
         </div>
-      </div>
-    </div> */}
-      <div className="container">
+      
+
         <div className="col-md-4 table-1">
           <div className="card">
             <div className="card-header">
@@ -89,6 +89,8 @@ function App() {
               <button className='btn btn-primary' onClick={addUser}>Add User</button>
             </div>
           </div>
+        </div>
+
         </div>
 
         <div className="logo_section" >
